@@ -9,25 +9,24 @@
     <title>My Nice Page</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        .my-footer {
-            height: 5em;
-            background-color: #163b65;
-            margin-top: 1.5em;
-            padding: 1em;
-            color: white;
-            font-size: 80%;
-        }
-        
-        .room-image {
-            max-width: 50%;
-        }
-        
-        .redText {
-            color: red;
-        }
-    </style>
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
 </head>
 
 <body>
@@ -72,88 +71,160 @@
             <div class="col-md-6">
                 <h4 class="mt-5 text-center">Search for availability</h4>
                 <form method="get" action="reservation.html" novalidate class="needs-validation">
-                    <div class="form-row">
 
-                        <div class="col">
-                            <div class="form-group">
-                                <label for="start_date">Start date</label>
-                                <input required type="date" class="form-control" id="start_date" name="start_date" aria-describedby="startdateHelp" placeholder="Enter Start Date">
-                                <small id="startdateHelp" class="form-text text-mu  ted">Enter your starting date</small>
+                    <div class="container">
+                        <div class="row text-center">
+
+                            <div class="form-row">
+
+                                <div class="col-md-3"></div>
+                                <div id="foo" class="row">
+                                    <div class="col text-center">
+                                        <div class="form-group">
+                                            <label for="start_date">Start date</label>
+                                            <input required type="text" class="form-control" id="start_date" name="start_date" aria-describedby="startdateHelp" placeholder="Enter Start Date">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="end_date">Ending date</label>
+                                            <input required type="text" class="form-control" id="end_date" name="end_date" aria-describedby="enddateHelp" placeholder="Enter end Date">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <hr>
 
-                            <div class="form-group">
-                                <label for="end_date">Ending date</label>
-                                <input required type="date" class="form-control" id="end_date" name="end_date" aria-describedby="enddateHelp" placeholder="Enter end Date">
-                                <small id="enddateHelp" class="form-text text-muted">Enter your ending date</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-12">
-
+                        <div class="col-md-6">
                             <button type="submit" class="btn btn-primary">Search Availability</button>
                         </div>
+
                     </div>
-
-                </form>
-                <button class="btn btn-primary" id="btnclickme">Clickme</button>
-                <p id="text">Click me</p>
-
             </div>
+
+            </form>
+
 
         </div>
+        <button class="btn btn-primary" id="btnclickme">Clickme</button>
+        <p id="text">Click me</p>
 
+    </div>
 
-        <footer class="my-footer">
-            <div class="row">
-                <div class="col">
-                    left
-                </div>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bulma.min.css">
 
-                <div class="col">
-                    center
-                </div>
+    <script src="https://unpkg.com/notie"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                let forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
 
-                <div class="col">
-                    right
-                </div>
-            </div>
-        </footer>
+        document.getElementById("btnclickme").addEventListener("click", function() {
+            // let l = document.getElementById("text")
+            // if (l.classList.contains("redText")) {
+            //     l.classList.remove("redText")
+            // } else {
+            //     l.classList.add("redText")
+            // }
+            notify("Hello!", "warning")
+        })
+        const elem = document.getElementById('foo');
+        const rangepicker = new DateRangePicker(elem, {
+            // ...options
+        });
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script>
-            // Example starter JavaScript for disabling form submissions if there are invalid fields
-            (function() {
-                'use strict';
-                window.addEventListener('load', function() {
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    let forms = document.getElementsByClassName('needs-validation');
-                    // Loop over them and prevent submission
-                    Array.prototype.filter.call(forms, function(form) {
-                        form.addEventListener('submit', function(event) {
-                            if (form.checkValidity() === false) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-                            form.classList.add('was-validated');
-                        }, false);
-                    });
-                }, false);
-            })();
-
-            document.getElementById("btnclickme").addEventListener("click", function() {
-                let l = document.getElementById("text")
-                if (l.classList.contains("redText")) {
-                    l.classList.remove("redText")
-                } else {
-                    l.classList.add("redText")
-                }
+        function notify(msg, msgType) {
+            notie.alert({
+                type: msgType,
+                text: msg,
             })
-        </script>
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.4s">
+                    <h2>About Our Hotel</h2>
+                    <p> 5-star sleeping experience at 1-star price</p>
+                </div>
+
+                <div class="wow fadeInUp col-md-5 col-sm-4" data-wow-delay="0.9s">
+                    <h2>Type of rooms</h2>
+                    <div>
+                        <h5>Generl's suite</h5>
+                        <h4>AC,lunch,dinner</h4>
+                    </div>
+                    <div>
+                        <h5>Generl's suite</h5>
+                        <h4>Gym,Breakfast,lunch,dinner eberything you want!</h4>
+                    </div>
+                </div>
+
+                <div class="wow fadeInUp col-md-3 col-sm-8" data-wow-delay="1s">
+                    <h2>Follow us</h2>
+                    <ul class="social-icon">
+                        <li>
+                            <a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="1s"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-instagram wow fadeIn" data-wow-delay="1s"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="1.3s"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="1.6s"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-behance wow fadeInUp" data-wow-delay="1.9s"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-google-plus wow fadeIn" data-wow-delay="2s"></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-md-12 col-sm-12">
+                    <p class="copyright-text">Copyright &copy; 2023 Hotel Booking| Design: <a rel="nofollow" href="http://www.templatemo.com/page/1" target="_parent">Book now</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 
