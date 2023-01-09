@@ -12,7 +12,7 @@ import (
 	"github.com/sanyog2491/bookings/package/render"
 )
 
-const portnum3 = ":2080"
+const portnum3 = ":8020"
 
 var app config.Appconfig
 
