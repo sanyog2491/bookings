@@ -12,7 +12,7 @@ import (
 	"github.com/sanyog2491/bookings/package/render"
 )
 
-const portnum3 = ":3000"
+const portnum3 = ":2080"
 
 var app config.Appconfig
 
@@ -46,7 +46,7 @@ func main() {
 
 	render.NewTemplate(&app)
 
-	fmt.Println("application is activated in port num: ", portnum3)
+	fmt.Println("application is activated in port num", portnum3)
 
 	srv := &http.Server{
 		Addr:    portnum3,
