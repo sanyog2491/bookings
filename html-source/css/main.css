@@ -35,6 +35,17 @@ footer .col-md-5 {
     margin: 0;
 }
 
+#custom-target {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border-style: solid;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
 .social-icon li {
     display: inline-block;
     list-style: none;
@@ -55,4 +66,13 @@ footer .col-md-5 {
 
 .social-icon li a:hover {
     background: #ffffff;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+
+.datepicker {
+    z-index: 10000;
 }

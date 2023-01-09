@@ -4,7 +4,8 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
 
     <title>My Nice Page</title>
 
@@ -15,6 +16,11 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.2/dist/css/datepicker-bs4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -22,54 +28,58 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora:700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-
-
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+    <div class="preloader">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="reservation.html">Book Now</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Rooms
-        </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="generals.html">General's Quarters</a>
-                        <a class="dropdown-item" href="majors.html">Major's Suite</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
+        <div class="sk-spinner sk-spinner-pulse"></div>
 
-            </ul>
+    </div>
+
+
+    <div class="navbar navbar-expand-lg navbar-default navbar-fixed-top " role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-fixed-top" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                    </button>
+                <a href="#" class="navbar-brand">Hotel</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right main-navigation">
+                    <li><a href="/" class="smoothScroll">Home</a></li>
+                    <li><a href="about.html" class="smoothScroll">About</a></li>
+                    <li><a href="reservation.html" class="smoothScroll">Trainers</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Rooms
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="generals.html">General's
+                                    Quarters</a>
+                            <a class="dropdown-item" href="majors.html">Major's
+                                    Suite</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html" class="smoothScroll">Contact</a></li>
+                </ul>
+            </div>
+
         </div>
-    </nav>
+    </div>
+
 
 
     <div class="container">
+
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <h4 class="mt-5 text-center">Search for availability</h4>
+            <div class="col-md-4">
+                <h4 class="text-center mt-4">Search for availability</h4>
                 <form method="get" action="reservation.html" novalidate class="needs-validation">
 
                     <div class="container">
@@ -77,18 +87,22 @@
 
                             <div class="form-row">
 
-                                <div class="col-md-3"></div>
-                                <div id="foo" class="row">
+                                <div class="col-md-6"></div>
+                                <div id="reservation-dates" class="row">
                                     <div class="col text-center">
-                                        <div class="form-group">
-                                            <label for="start_date">Start date</label>
-                                            <input required type="text" class="form-control" id="start_date" name="start_date" aria-describedby="startdateHelp" placeholder="Enter Start Date">
+                                        <div class="form-group mt-5">
+                                            <label for="start_date">Start
+                                                    date</label>
+                                            <input required type="text" class="form-control" id="start_date" name="start_date" aria-describedby="startdateHelp" placeholder="Enter Start
+                                                    Date">
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="form-group">
-                                            <label for="end_date">Ending date</label>
-                                            <input required type="text" class="form-control" id="end_date" name="end_date" aria-describedby="enddateHelp" placeholder="Enter end Date">
+                                        <div class="form-group mt-5">
+                                            <label for="end_date">Ending
+                                                    date</label>
+                                            <input required type="text" class="form-control" id="end_date" name="end_date" aria-describedby="enddateHelp" placeholder="Enter end
+                                                    Date">
                                         </div>
                                     </div>
                                 </div>
@@ -97,16 +111,19 @@
                         <hr>
 
                         <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary">Search Availability</button>
+                            <button type="submit" class="btn btn-primary">Search
+                                    Availability</button>
                         </div>
 
                     </div>
+
+                </form>
             </div>
-
-            </form>
-
-
         </div>
+
+
+
+
         <button class="btn btn-primary" id="btnclickme">Clickme</button>
         <p id="text">Click me</p>
 
@@ -117,9 +134,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bulma.min.css">
-
     <script src="https://unpkg.com/notie"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.2/dist/js/datepicker-full.min.js"></script>
+    <script src="https://unpkg.com/notie"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
     <script>
+        let attention = prompt();
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
             'use strict';
@@ -138,20 +160,47 @@
                 });
             }, false);
         })();
+        const elem = document.getElementById('reservation-dates');
+        const rangePicker = new DateRangePicker(elem, {
+            format: "yyyy-mm-dd",
+        });
+
+
+        // document.getElementById("btnclickme").addEventListener("click", function() {
+        //     let l = document.getElementById("text")
+        //     if (l.classList.contains("redText")) {
+        //         l.classList.remove("redText")
+        //     } else {
+        //         l.classList.add("redText")
+        //     }
+        // attention.toast({
+        //     msg: 'hello world',
+        // });
+        // notify("Hello!", "warning")
 
         document.getElementById("btnclickme").addEventListener("click", function() {
-            // let l = document.getElementById("text")
-            // if (l.classList.contains("redText")) {
-            //     l.classList.remove("redText")
-            // } else {
-            //     l.classList.add("redText")
-            // }
-            notify("Hello!", "warning")
+            let html = `
+        <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-row" id="reservation-dates-modal">
+                        <div class="col">
+                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
+                        </div>
+                        <div class="col">
+                            <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+        `;
+            attention.custom({
+                title: 'Choose your dates',
+                msg: html,
+            });
         })
-        const elem = document.getElementById('foo');
-        const rangepicker = new DateRangePicker(elem, {
-            // ...options
-        });
 
         function notify(msg, msgType) {
             notie.alert({
@@ -159,9 +208,110 @@
                 text: msg,
             })
         }
+
+        function prompt() {
+            let toast = function(c) {
+                const {
+                    msg = '',
+                        icon = 'success',
+                        position = 'top-end',
+
+                } = c;
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    title: msg,
+                    position: position,
+                    icon: icon,
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({})
+            }
+
+            let success = function(c) {
+                const {
+                    msg = "",
+                        title = "",
+                        footer = "",
+                } = c
+
+                Swal.fire({
+                    icon: 'success',
+                    title: title,
+                    text: msg,
+                    footer: footer,
+                })
+
+            }
+            let error = function(c) {
+                const {
+                    msg = "",
+                        title = "",
+                        footer = "",
+                } = c
+
+                Swal.fire({
+                    icon: 'error',
+                    title: title,
+                    text: msg,
+                    footer: footer,
+                })
+
+            }
+            async function custom(c) {
+                const {
+                    msg = "",
+                        title = "",
+                } = c;
+
+                const {
+                    value: formValues
+                } = await Swal.fire({
+                    title: title,
+                    html: msg,
+                    backdrop: false,
+                    focusConfirm: false,
+                    showCancelbutton: true,
+                    willOpen: () => {
+                        const elem = document.getElementById("reservation-dates-modal");
+                        const rp = new DateRangePicker(elem, {
+                            format: 'yyyy-mm-dd',
+                            showOnFocus: true,
+                        })
+                    },
+                    didOpen: () => {
+                        document.getElementById("start").removeAttribute("disabled");
+                        document.getElementById("end").removeAttribute("disabled");
+                    },
+                    preConfirm: () => {
+                        return [
+                            document.getElementById('start').value,
+                            document.getElementById('end').value
+                        ]
+                    }
+                })
+
+                if (formValues) {
+                    Swal.fire(JSON.stringify(formValues))
+                }
+            }
+            return {
+                toast: toast,
+                success: success,
+                error: error,
+                custom: custom,
+            }
+        }
     </script>
     <footer>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
 
                 <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.4s">
@@ -177,7 +327,7 @@
                     </div>
                     <div>
                         <h5>Generl's suite</h5>
-                        <h4>Gym,Breakfast,lunch,dinner eberything you want!</h4>
+                        <h4>Gym,Breakfast,lunch,dinner everything you want!</h4>
                     </div>
                 </div>
 
